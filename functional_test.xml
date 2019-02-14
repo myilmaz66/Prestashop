@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Presta Shop" verbose="2">
+
+    <test name="Presta Shop Automated Tests">
+        <classes>
+            <class name="com.prestashop.tests.functional_tests.login.LoginTest">
+                <!--<methods>-->
+                    <!--<exclude name="cartIconDeleteTest"/>-->
+                <!--</methods>-->
+            </class>
+        </classes>
+    </test>
+
+</suite>

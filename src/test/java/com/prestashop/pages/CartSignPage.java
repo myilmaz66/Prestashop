@@ -8,8 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class CartDropDownPage {
-    public CartDropDownPage(){
+public class CartSignPage {
+    public CartSignPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
@@ -35,8 +35,8 @@ public class CartDropDownPage {
 
 
     public int priceOfDDCartProds(int prodOrderNum) {
-        int price = 0;
-        return price = Integer.parseInt(priceOfDDCartProds.get(prodOrderNum-1).getText().replace(".", "").substring(1));
+        return Integer.parseInt(priceOfDDCartProds.get(prodOrderNum-1).
+                getText().replace(".", "").substring(1));
     }
 
     public String nameOfDDCartProds(int prodOrderNum){

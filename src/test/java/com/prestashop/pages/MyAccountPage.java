@@ -5,11 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class CartMessagePage {
-    public CartMessagePage(){
+public class MyAccountPage {
+    public MyAccountPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-    @FindBy(xpath = "//span[@title='Close window']")
-    public WebElement closeWindow;
+    @FindBy(xpath = "//a[.='My personal info']")
+    public WebElement myPersonalInfo;
 }

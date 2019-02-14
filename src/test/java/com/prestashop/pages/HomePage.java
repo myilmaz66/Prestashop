@@ -2,7 +2,6 @@ package com.prestashop.pages;
 
 import com.prestashop.utilities.Config;
 import com.prestashop.utilities.Driver;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -20,7 +19,7 @@ public class HomePage {
     @FindBy(xpath = "//a[@title='View my shopping cart']")
     public WebElement hoverOverCartIcon;
 
-    @FindBy(xpath = "//ul[@id='homefeatured']//a[@class='product_img_link']")
+    @FindBy(xpath = "//ul[@id='homefeatured']//h5")
     public List<WebElement> popularProductLocators;
 
     @FindBy(xpath = "//ul[@id='blockbestsellers']//a[@class='product_img_link']")
@@ -41,6 +40,11 @@ public class HomePage {
     @FindBy(xpath = "//span[@class='ajax_cart_no_product']")
     public WebElement emptyCart;
 
+    @FindBy(xpath = "//a[@title='Log in to your customer account']")
+    public WebElement signIn;
+
+    @FindBy(xpath = "//a[@title='View my customer account']/span")
+    public WebElement accHolderFullName;
 
     public void open(){
         Driver.getDriver().get(Config.getProperty("url"));

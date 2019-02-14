@@ -1,7 +1,6 @@
 package com.prestashop.pages;
 
 import com.prestashop.utilities.Driver;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -21,9 +20,6 @@ public class LoginPage {
 
     @FindBy(xpath = "//button[@id='SubmitLogin']//span")
     public WebElement signInButton;
-
-    @FindBy(xpath = "//a[@title='Log in to your customer account']")
-    public WebElement signInLink;
 
 
     public void login(String email, String password){
